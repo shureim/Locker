@@ -45,9 +45,20 @@ class TestUser(unittest.TestCase) :
         test save multiple user   test case to check if we can save multiple user.
         """
         self.new_user.save_user()
-        test.user = User("Tarick", "Instagram", "tarick@gmail.com", "Tarick002")
+        test_user = User("Tarick", "Instagram", "tarick@gmail.com", "Tarick002")
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
+
+
+    def test_delete_user(self) :
+        """
+        test delete user -test case to delete already saved user from the user list
+        """
+        self.new_user.save_user()
+        test_user = User("peter", "Yahoo", "peter@gmail.com", "Peter003")
+        test_user.save_user()
+        self.assertEqual(len(User.user_list),1)
+        
 
 
 
