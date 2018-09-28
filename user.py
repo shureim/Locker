@@ -63,6 +63,14 @@ class User :
             if user.email == email:
                 return True
         return False
+
+    @classmethod # decorator
+    def display_user(cls) :
+        """
+        method tha returns users list
+        """
+
+        return cls.user_list
     
 
 

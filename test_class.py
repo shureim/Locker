@@ -83,7 +83,7 @@ class TestUser(unittest.TestCase) :
         """
         test display all user -test case to return the user list that is saved
         """
-        self.assertEqual(User.diplay_user(), User.user_list)
+        self.assertEqual(User.display_user(), User.user_list)
 
 
 
