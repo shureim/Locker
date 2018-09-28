@@ -57,8 +57,8 @@ class TestUser(unittest.TestCase) :
         self.new_user.save_user()
         test_user = User("peter", "Yahoo", "peter@gmail.com", "Peter003")
         test_user.save_user()
-        self.assertEqual(len(User.user_list),1)
-        
+        self.assertEqual(len(User.user_list),2)
+
 
 
 

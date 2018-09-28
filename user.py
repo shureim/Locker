@@ -27,4 +27,10 @@ class User :
         """
         User.user_list.append(self)
 
+    def delete_user(self) :
+        """
+        delete user method removes unwanted user object from users list
+        """
+        User.user_list.remove(self)
+        
 
