@@ -32,5 +32,19 @@ class User :
         delete user method removes unwanted user object from users list
         """
         User.user_list.remove(self)
+
+    @classmethod #decorator
+    def find_by_accountName(cls, accountName) :
+        """
+        find by accountName method  that takes in the accountname and returns the user tha matches that user password.
         
+        Args:
+            accountName to search for
+        Returns :
+            user of the person that matches tha password
+
+        """
+        for user in cls.user_list :
+            if user.accountName == accountName :
+                return user
 

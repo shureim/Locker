@@ -16,7 +16,7 @@ class TestUser(unittest.TestCase) :
         set up method  to run before each test cases
         """
 
-        self.new_user = User("John", "Facebook", "john@gmail.com", "James001")
+        self.new_user = User("John", "Facebook", "john@gmail.com", "James001") #new user
 
     def tearDown(self) :
         """
@@ -45,7 +45,7 @@ class TestUser(unittest.TestCase) :
         test save multiple user   test case to check if we can save multiple user.
         """
         self.new_user.save_user()
-        test_user = User("Tarick", "Instagram", "tarick@gmail.com", "Tarick002")
+        test_user = User("Tarick", "Instagram", "tarick@gmail.com", "Tarick002") #new user
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
@@ -55,7 +55,7 @@ class TestUser(unittest.TestCase) :
         test delete user -test case to delete already saved user from the user list
         """
         self.new_user.save_user()
-        test_user = User("peter", "Yahoo", "peter@gmail.com", "Peter003")
+        test_user = User("peter", "Yahoo", "peter@gmail.com", "Peter003") # new user
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
@@ -64,10 +64,20 @@ class TestUser(unittest.TestCase) :
         test find user by accountName-test case to find user  by accountname and diplay the information
         """
         self.new_user.save_user()
-        test_user = User("Joe", "Snapchat", "joe@gmail.com","Joe004")
+        test_user = User("Joe", "Snapchat", "joe@gmail.com","Joe004") # new user
         test_user.save_user()
         found_user = User.find_by_accountName("Snapchat")
         self.assertEqual(found_user.password,test_user.password)
+
+    def test_user_exist(self) :
+        """
+        test user exists -test case to test if the user exists and if not return Boolean
+        """
+        self.new_user.save_user()
+        test_user = User("marcus", "LinkedIn", "marcus@gmail.com","Marcus005") # new user
+        test_user.save_user()
+        user_exist = User.user_exist("marcus@gmail.com")
+        self.assertEquals(user_exist.accountName,test_user.accountName)
 
 
 
