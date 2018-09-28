@@ -59,6 +59,16 @@ class TestUser(unittest.TestCase) :
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
+    def test_find_user_by_accountName(self):
+        """
+        test find user by accountName-test case to find user  by accountname and diplay the information
+        """
+        self.new_user.save_user()
+        test_user = User("Joe", "Snapchat", "joe@gmail.com","Joe004")
+        test_user.save_user()
+        found_user = User.find_by_accountName("Snapchat")
+        self.assertEqual(found_user.password,test_user.password)
+
 
 
 
