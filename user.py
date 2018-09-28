@@ -21,10 +21,10 @@ class User :
         self.email = email
         self.password = password
 
-    # def save_user(self) :
-    #     """
-    #     save_user method saves user object into users list.
-    #     """
-    #     User.user_list.append(self)
+    def save_user(self) :
+        """
+        save_user method saves user object into users list.
+        """
+        User.user_list.append(self)
 
 
