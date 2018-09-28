@@ -69,15 +69,15 @@ class TestUser(unittest.TestCase) :
         found_user = User.find_by_accountName("Snapchat")
         self.assertEqual(found_user.password,test_user.password)
 
-    def test_user_exist(self) :
+    def test_user_exists(self) :
         """
         test user exists -test case to test if the user exists and if not return Boolean
         """
         self.new_user.save_user()
         test_user = User("marcus", "LinkedIn", "marcus@gmail.com","Marcus005") # new user
         test_user.save_user()
-        user_exist = User.user_exist("marcus@gmail.com")
-        self.assertEquals(user_exist.accountName,test_user.accountName)
+        user_exists = User.user_exist("marcus@gmail.com")
+        self.assertTrue(user_exists)
 
 
 

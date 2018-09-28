@@ -48,3 +48,22 @@ class User :
             if user.accountName == accountName :
                 return user
 
+    @classmethod # decorator
+    def user_exist (cls, email) :
+        """
+        user exist method that checks if the user exist
+
+        Args :
+            search if the username exist
+        
+        Return :
+            if the user does not exist the return with boolean
+        """
+        for user in cls.user_list:
+            if user.email == email:
+                return True
+        return False
+    
+
+
+
