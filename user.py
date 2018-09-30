@@ -15,9 +15,9 @@ class User :
             lastName : new user lastName .
             user_password : new user_password .
         """
-    #     self.firstName = firstName
-    #     self.lastName = lastName
-    #     self.user_password = user_password
+        self.firstName = firstName
+        self.lastName = lastName
+        self.user_password = user_password
         
     # def save_user(self) :
     #     """
