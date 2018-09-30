@@ -32,19 +32,19 @@ class Credential :
         """
         Credential.credential_list.remove(self)
 
-    # @classmethod #decorator
-    # def find_by_email(cls, email) :
-    #     """
-    #     find by email method  that takes in the email and returns the credential that matches that credential password.
+    @classmethod #decorator
+    def find_by_email(cls, email) :
+        """
+        find by email method  that takes in the email and returns the credential that matches that credential password.
         
-    #     Args:
-    #         email to search for
-    #     Returns :
-    #         credential of the person that matches that password
-    #     """
-    #     for credential in cls.credential_list :
-    #         if credential.email == email :
-    #             return credential
+        Args:
+            email to search for
+        Returns :
+            credential of the person that matches that password
+        """
+        for credential in cls.credential_list :
+            if credential.email == email :
+                return credential
 
     # @classmethod # decorator
     # def display_credential(cls) :
