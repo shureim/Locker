@@ -26,11 +26,11 @@ class Credential :
         """
         Credential.credential_list.append(self)
 
-    # def delete_credential(self) :
-    #     """
-    #     method that delete credential from credential list
-    #     """
-    #     Credential.credential_list.remove(self)
+    def delete_credential(self) :
+        """
+        method that delete credential from credential list
+        """
+        Credential.credential_list.remove(self)
 
     # @classmethod #decorator
     # def find_by_email(cls, email) :
