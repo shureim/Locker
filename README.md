@@ -12,6 +12,13 @@ more that one account and would like to remember them.
 * Make sure your computer in connected to a browser.
 * Python has been used to form this application.
 
+## Behaviour Driven Development (BDD).
+|Behaviour                     |  Input                        | Output            |
+|------------------------------|-------------------------------|-------------------|
+|If you want to generate password | gg| gives you option to create first name, second name and it generatees a password for you |
+|If you want to save password  | p | gives you option to create first name, second name then create password and saves it |
+|If you want to find user | fu| it gives you option to enter the user to search |
+
 ## Known Bugs.
 there are no know Bugs in this web page.
 
