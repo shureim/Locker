@@ -28,10 +28,6 @@ there are no know Bugs in this web page.
 ## Support and contact details.
 For more information contact +25450995069 or Email me tarickaliabdi@gmail.com.
 
-## Link to live website.
-Password Locker ( https://shureim.github.io/Locker/ )
-
-
 ### License.
 *MIT Licence.*
 Copyright (c) 2018**Tarick Ali Abdi**
